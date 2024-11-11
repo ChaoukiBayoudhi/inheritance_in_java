@@ -43,8 +43,8 @@ public class Main {
         //int hashCode() : returns a random value as a hash code.
         //Class getClass() : returns the class of the object
 
-
-        int choice;
+//polymorphisme
+     /*   int choice;
         Client c=new Client();
         //Object c=null;
         do{
@@ -74,6 +74,18 @@ public class Main {
             //test getClass() method
             System.out.println(c.getClass());
         }while(choice!=3);
+
+      */
+
+        //Test Store class
+        Store  store = new Store();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("nb Clients ? ");
+        int nbClients = sc.nextInt();
+        for (int i = 0; i <nbClients;i++) {
+
+        }
+        //print clients
 
     }
 }

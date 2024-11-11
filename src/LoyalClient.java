@@ -1,7 +1,4 @@
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
@@ -10,6 +7,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 //@AllArgsConstructor
 @SuperBuilder
+@ToString(callSuper = true)
 public class LoyalClient extends Client {
 
 

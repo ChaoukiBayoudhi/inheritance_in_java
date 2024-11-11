@@ -2,11 +2,15 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
+import java.util.Scanner;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
+@ToString
+
 public class Client {
     protected int id; //the id is directly accessible in the subclass
     private String name;
@@ -24,5 +28,9 @@ public class Client {
         System.out.println("email: "+email);
         System.out.println("phoneNumber: "+phoneNumber);
         System.out.println("nbPoints: "+nbPoints);
+    }
+    public void get()
+    {
+        Scanner sc = new Scanner(System.in);
     }
 }
