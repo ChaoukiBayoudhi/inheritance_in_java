@@ -1,10 +1,12 @@
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@SuperBuilder
 public class Client {
     protected int id; //the id is directly accessible in the subclass
     private String name;
