@@ -82,10 +82,28 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("nb Clients ? ");
         int nbClients = sc.nextInt();
+        int choice;
+        Client c;
         for (int i = 0; i <nbClients;i++) {
+           // choice=menu();
+            do {
+                System.out.println("client or Loyal client ? (1/2)");
+                choice = sc.nextInt();
+            }while(choice<0 ||choice>2);
+            if (choice==1)
+                c=new Client();
+            else
+                c=new LoyalClient();
+
+            c.get();
+            boolean result=store.addClient(c);
+            if(result)
+                System.out.println("The client was successfully added.");
+            else
+                System.out.println("The client already exists.");
 
         }
         //print clients
-
+        store.printClients();
     }
 }

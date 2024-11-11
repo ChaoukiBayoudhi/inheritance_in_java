@@ -2,6 +2,7 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 @Getter
@@ -32,5 +33,18 @@ public class Client {
     public void get()
     {
         Scanner sc = new Scanner(System.in);
+        System.out.println("id ? ");
+        id=sc.nextInt();
+        System.out.println("name ? ");
+        name=sc.nextLine();
+        name=sc.nextLine();
+        System.out.println("email ? ");
+        name=sc.next();
+        System.out.println("nb Points ? ");
+        nbPoints=sc.nextInt();
+        // read the LocalDate from the keyboard
+        DateTimeFormatter pattern =DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        System.out.println("birthdate (yyyy-MM-dd) ?  ");
+        birthday=LocalDate.parse(sc.next(),pattern);
     }
 }
